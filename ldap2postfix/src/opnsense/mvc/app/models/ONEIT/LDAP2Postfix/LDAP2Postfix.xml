@@ -1,0 +1,23 @@
+<model>
+	<mount>//ONEIT/LDAP2Postfix</mount>
+	<description>
+		ONEIT LDAP to Postfix mailaddress sync
+	</description>
+	<items>
+		<general>
+			<Enabled type="BooleanField">
+			</Enabled>
+			<LDAPCommand type="TextField">
+				<Required>Y</Required>
+			</LDAPCommand>
+			<EmptyRecipients type="BooleanField">
+			</EmptyRecipients>
+			<FillRecipients type="BooleanField">
+			</FillRecipients>
+			<EmptySenders type="BooleanField">
+			</EmptySenders>
+			<FillSenders type="BooleanField">
+			</FillSenders>
+		</general>
+	</items>
+</model>

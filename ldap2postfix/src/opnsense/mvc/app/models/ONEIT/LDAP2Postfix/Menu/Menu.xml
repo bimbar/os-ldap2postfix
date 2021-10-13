@@ -1,0 +1,6 @@
+<menu>
+    <Services cssClass="fa fa-lock fa-fw" order="10">
+        <LDAP2Postfix VisibleName="LDAP 2 Postfix" url="/ui/ldap2postfix/">
+        </LDAP2Postfix>
+    </Services>
+</menu>

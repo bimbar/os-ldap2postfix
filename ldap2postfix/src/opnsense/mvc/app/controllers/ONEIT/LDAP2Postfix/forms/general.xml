@@ -1,0 +1,43 @@
+<form>
+	<field>
+		<id>ldap2postfix.general.Enabled</id>
+		<label>enabled</label>
+		<type>checkbox</type>
+		<help>Enable this feature</help>
+	</field>
+	<field>
+		<id>ldap2postfix.general.LDAPCommand</id>
+		<label>LDAP Command</label>
+		<type>textbox</type>
+		<help>Command to retrieve the mail addresses in postfix format (ADDRESS OK|REJECT).<br/>For Example: /usr/local/bin/ldapsearch -h HOST -p PORT -b "BASEPATH" -D "USER" -w "PASSWORD" -o ldif-wrap=no "(sAMAccountName=*)"  | grep -i "^proxyAddresses: smtp:" | sed -E 's/^proxyAddresses: .*:(.*)/\1 OK/'</help>
+		<default>/usr/local/bin/ldapsearch -h HOST -p PORT -b "BASEPATH" -D "USER" -w "PASSWORD" -o ldif-wrap=no "(sAMAccountName=*)"  | grep -i "^proxyAddresses: smtp:" | sed -E 's/^proxyAddresses: .*:(.*)/\1 OK/'</default>
+	</field>
+	<field>
+		<id>ldap2postfix.general.EmptyRecipients</id>
+		<label>Empty Postfix Recipients table</label>
+		<type>checkbox</type>
+		<default>1</default>
+		<help>Delete the contents of the Recipients Table when running. Should always be activated when the import is activated.</help>
+	</field>
+	<field>
+		<id>ldap2postfix.general.FillRecipients</id>
+		<label>Fill Postfix Recipients table</label>
+		<type>checkbox</type>
+		<default>1</default>
+		<help>Import the Recipients Table when running.</help>
+	</field>
+	<field>
+		<id>ldap2postfix.general.EmptySenders</id>
+		<label>Empty Postfix Senders table</label>
+		<type>checkbox</type>
+		<default>0</default>
+		<help>Delete the contents of the Senders Table when running.</help>
+	</field>
+	<field>
+		<id>ldap2postfix.general.FillSenders</id>
+		<label>Fill Postfix Senders table</label>
+		<type>checkbox</type>
+		<default>0</default>
+		<help>Import the Senders Table when running. Should always be activated when the import is activated.</help>
+	</field>
+</form>

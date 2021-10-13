@@ -1,0 +1,11 @@
+<acl>
+    <!-- unique acl key, must be globally unique for all ACLs  -->
+    <page-services-ldap2postfix>
+        <name>WebCfg - Services: LDAP2Postfix! </name>
+        <description>Allow access to the LDAP2Postfix module</description>
+        <patterns>
+            <pattern>ui/ldap2postfix/*</pattern>
+            <pattern>api/ldap2postfix/*</pattern>
+        </patterns>
+    </page-services-ldap2postfix>
+</acl>
